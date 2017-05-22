@@ -99,8 +99,8 @@
             // Register eventBus methods.
             registerBusMethods()
             {
-                this.eventBus.$on('showLoader', this.showMe);
-                this.eventBus.$on('hideLoader', this.hideMe);
+                this.eventBus.$on('show-full-loading', this.showMe);
+                this.eventBus.$on('hide-full-loading', this.hideMe);
             }
         },
         mounted() {
