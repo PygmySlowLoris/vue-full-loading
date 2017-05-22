@@ -49,17 +49,48 @@
                             <div class="content">
                                 <div class="columns">
                                     <div class="column">
-                                        <div class="field">
-                                            <label class="label is-pulled-left">Label</label>
-                                            <p class="control">
-                                                <input type="text" class="input" v-model="label">
-                                            </p>
+                                        <div class="field is-horizontal">
+                                            <div class="field-label is-normal">
+                                                <label class="label">Label</label>
+                                            </div>
+                                            <div class="field-body">
+                                                <div class="field">
+                                                    <p class="control">
+                                                        <input type="text" class="input" v-model="label">
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="field">
-                                            <p class="control">
-                                                <button class="button is-primary" @click="showMe">Show loading for 2 seconds</button>
-                                            </p>
+                                        <div class="field is-horizontal">
+                                            <div class="field-label is-normal">
+                                                <label class="label">Timeout</label>
+                                            </div>
+                                            <div class="field-body">
+                                                <div class="field">
+                                                    <p class="control">
+                                                        <input class="input" type="text" placeholder="2000ms">
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="field is-horizontal">
+                                            <label style="margin-right: 1rem"><h6><b>Overlay</b></h6></label>
+                                            <div class="field">
+                                                <p class="control">
+                                                    <label class="radio">
+                                                        <input type="radio" name="question" checked>
+                                                        Yes
+                                                    </label>
+                                                    <label class="radio">
+                                                        <input type="radio" name="question">
+                                                        No
+                                                    </label>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <button class="button is-primary" style="width: 100%" @click="showMe">Show loader</button>
                                     </div>
                                 </div>
                                 <div class="columns">

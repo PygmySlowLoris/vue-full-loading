@@ -119,7 +119,7 @@
         left: 0;
         height: 100vh;
         width: 100vw;
-        position: absolute;
+        position: fixed;
         margin: 0;
     }
 
