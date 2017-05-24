@@ -49,17 +49,48 @@
                             <div class="content">
                                 <div class="columns">
                                     <div class="column">
-                                        <div class="field">
-                                            <label class="label is-pulled-left">Label</label>
-                                            <p class="control">
-                                                <input type="text" class="input" v-model="label">
-                                            </p>
+                                        <div class="field is-horizontal">
+                                            <div class="field-label is-normal">
+                                                <label class="label">Label</label>
+                                            </div>
+                                            <div class="field-body">
+                                                <div class="field">
+                                                    <p class="control">
+                                                        <input type="text" class="input" v-model="label">
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="field">
-                                            <p class="control">
-                                                <button class="button is-primary" @click="showMe">Show loading for 2 seconds</button>
-                                            </p>
+                                        <div class="field is-horizontal">
+                                            <div class="field-label is-normal">
+                                                <label class="label">Timeout</label>
+                                            </div>
+                                            <div class="field-body">
+                                                <div class="field">
+                                                    <p class="control">
+                                                        <input class="input" type="text" placeholder="2000" v-model="timeOut">
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="field is-horizontal">
+                                            <label style="margin-right: 1rem"><h6><b>Overlay</b></h6></label>
+                                            <div class="field">
+                                                <p class="control">
+                                                    <label class="radio">
+                                                        <input type="radio" name="question" :value="true" checked v-model="overlay">
+                                                        Yes
+                                                    </label>
+                                                    <label class="radio">
+                                                        <input type="radio" name="question" :value="false" v-model="overlay">
+                                                        No
+                                                    </label>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <button class="button is-primary" style="width: 100%" @click="showMe">Show loader</button>
                                     </div>
                                 </div>
                                 <div class="columns">
@@ -75,7 +106,8 @@
         </section>
         <loading
             :show="show"
-            :label="label">
+            :label="label"
+            :overlay="overlay">
 
         </loading>
         <footer class="footer">
@@ -124,7 +156,9 @@
             return {
                 base,
                 show: false,
-                label: 'Loading...'
+                label: 'Loading...',
+                timeOut: 2000,
+                overlay: true
             }
         },
         methods: {
@@ -134,7 +168,7 @@
 
                 setTimeout(() => {
                     this.show = false;
-                }, 2000)
+                }, this.timeOut)
             }
         }
     }
