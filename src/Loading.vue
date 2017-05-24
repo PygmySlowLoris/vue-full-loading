@@ -68,15 +68,21 @@
             label: {
                 default: 'Loading...'
             },
-            // central event bus
-            eventBus: {
-                default: null
-            },
             show: {
                 default: false
             },
             overlay: {
                 default: true
+            },
+            // central event bus
+            eventBus: {
+                default: null
+            },
+            eventShow: {
+                default: 'show-full-loading'
+            },
+            eventHide: {
+                default: 'hide-full-loading'
             }
         },
         data() {
@@ -99,8 +105,8 @@
             // Register eventBus methods.
             registerBusMethods()
             {
-                this.eventBus.$on('show-full-loading', this.showMe);
-                this.eventBus.$on('hide-full-loading', this.hideMe);
+                this.eventBus.$on(this.eventShow, this.showMe);
+                this.eventBus.$on(this.eventHide, this.hideMe);
             }
         },
         mounted() {
