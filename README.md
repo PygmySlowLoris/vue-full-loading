@@ -42,8 +42,8 @@ You also can manage this component by your eventBus with custom event names.
 <template>
  <loading
      :event-bus="myEventBus"
-     :event-show="show-my-full-loading"
-     :event-hide="hide-my-full-loading"
+     event-show="show-my-full-loading"
+     event-hide="hide-my-full-loading"
      :label="label">
  </loading>
 </template>
