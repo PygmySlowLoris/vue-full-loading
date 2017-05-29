@@ -5,6 +5,10 @@ Full overlay loading with spinner for Vue.
 
 Perfect for performing a task in the background avoiding any other action on the screen.
 
+<p align="center">
+<img width="600" src="https://raw.githubusercontent.com/PygmySlowLoris/vue-full-loading/master/demo.gif"/>
+</p>
+
 <a href="https://pygmyslowloris.github.io/vue-full-loading/"> Live Demo</a>
 
 ##  Installation
