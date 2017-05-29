@@ -4,6 +4,7 @@
 Full overlay with spinner for Vue.
 
 Perfect for performing a task in the background avoiding any other action on the screen.
+Can be easily handled by your <b>central event bus</b>
 
 <p align="center">
 <img width="600" src="https://raw.githubusercontent.com/PygmySlowLoris/vue-full-loading/master/demo.gif"/>
