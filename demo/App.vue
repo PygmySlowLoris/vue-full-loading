@@ -68,7 +68,7 @@
                                             <div class="field-body">
                                                 <div class="field">
                                                     <p class="control">
-                                                        <input class="input" type="text" placeholder="2000ms">
+                                                        <input class="input" type="text" placeholder="2000" v-model="timeOut">
                                                     </p>
                                                 </div>
                                             </div>
@@ -80,11 +80,11 @@
                                             <div class="field">
                                                 <p class="control">
                                                     <label class="radio">
-                                                        <input type="radio" name="question" checked>
+                                                        <input type="radio" name="question" :value="true" checked v-model="overlay">
                                                         Yes
                                                     </label>
                                                     <label class="radio">
-                                                        <input type="radio" name="question">
+                                                        <input type="radio" name="question" :value="false" v-model="overlay">
                                                         No
                                                     </label>
                                                 </p>
@@ -106,7 +106,8 @@
         </section>
         <loading
             :show="show"
-            :label="label">
+            :label="label"
+            :overlay="overlay">
 
         </loading>
         <footer class="footer">
@@ -155,7 +156,9 @@
             return {
                 base,
                 show: false,
-                label: 'Loading...'
+                label: 'Loading...',
+                timeOut: 2000,
+                overlay: true
             }
         },
         methods: {
@@ -165,7 +168,7 @@
 
                 setTimeout(() => {
                     this.show = false;
-                }, 2000)
+                }, this.timeOut)
             }
         }
     }
