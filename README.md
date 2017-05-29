@@ -1,7 +1,7 @@
 #   Vue Full Loading
 
 
-Full overlay loading with spinner for Vue.
+Full overlay with spinner for Vue.
 
 Perfect for performing a task in the background avoiding any other action on the screen.
 
