@@ -29,6 +29,14 @@ npm install vue-full-loading --save
 |  `event-show`         | String    | <b>Default 'show-full-loading'|
 |  `event-hide`         | String    | <b>Default 'hide-full-loading'|
 
+##  Slots
+
+Want to add your own loading content/style? No problem, you can use the available slots to do so.
+
+Available slots:
+ * `loading-container` - This is the container for the loading text/spinner
+ * `loading-text` -  Only for the loading text
+ * `loading-spinner` - Only for the spinner
 
 ##  Examples
 
