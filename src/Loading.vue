@@ -5,7 +5,7 @@
     >
         <div v-if="showing" :class="{'white-overlay': overlay}">
             <div class="loader-wrapper">
-                <div class="pulled-left" style="padding: 10px 20px">{{label}}</div>
+                <div class="pulled-left" style="padding: 10px 20px" v-html="label"></div>
                 <div class="wrapper">
                     <div class="spinner-container">
                         <div class="spinner-layer spinner-layer--blue">
