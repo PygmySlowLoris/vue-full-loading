@@ -4,60 +4,66 @@
             leave-active-class="animated fadeOut"
     >
         <div v-if="showing" :class="{'white-overlay': overlay}">
-            <div class="loader-wrapper">
-                <div class="pulled-left" style="padding: 10px 20px" v-html="label"></div>
-                <div class="wrapper">
-                    <div class="spinner-container">
-                        <div class="spinner-layer spinner-layer--blue">
-                            <div class="spinner-clipper spinner-clipper--left">
-                                <div class="spinner-circle"></div>
-                            </div>
-                            <div class="spinner--patch">
-                                <div class="spinner-circle"></div>
-                            </div>
-                            <div class="spinner-clipper spinner-clipper--right">
-                                <div class="spinner-circle"></div>
-                            </div>
-                        </div>
+            <slot name="loading-container">
+                <div class="loader-wrapper">
+                    <slot name="loading-text">
+                        <div class="pulled-left" v-html="label"></div>
+                    </slot>
+                    <slot name="loading-spinner">
+                        <div class="wrapper">
+                            <div class="spinner-container">
+                                <div class="spinner-layer spinner-layer--blue">
+                                    <div class="spinner-clipper spinner-clipper--left">
+                                        <div class="spinner-circle"></div>
+                                    </div>
+                                    <div class="spinner--patch">
+                                        <div class="spinner-circle"></div>
+                                    </div>
+                                    <div class="spinner-clipper spinner-clipper--right">
+                                        <div class="spinner-circle"></div>
+                                    </div>
+                                </div>
 
-                        <div class="spinner-layer spinner-layer--red">
-                            <div class="spinner-clipper spinner-clipper--left">
-                                <div class="spinner-circle"></div>
-                            </div>
-                            <div class="spinner--patch">
-                                <div class="spinner-circle"></div>
-                            </div>
-                            <div class="spinner-clipper spinner-clipper--right">
-                                <div class="spinner-circle"></div>
-                            </div>
-                        </div>
+                                <div class="spinner-layer spinner-layer--red">
+                                    <div class="spinner-clipper spinner-clipper--left">
+                                        <div class="spinner-circle"></div>
+                                    </div>
+                                    <div class="spinner--patch">
+                                        <div class="spinner-circle"></div>
+                                    </div>
+                                    <div class="spinner-clipper spinner-clipper--right">
+                                        <div class="spinner-circle"></div>
+                                    </div>
+                                </div>
 
-                        <div class="spinner-layer spinner-layer--yellow">
-                            <div class="spinner-clipper spinner-clipper--left">
-                                <div class="spinner-circle"></div>
-                            </div>
-                            <div class="spinner--patch">
-                                <div class="spinner-circle"></div>
-                            </div>
-                            <div class="spinner-clipper spinner-clipper--right">
-                                <div class="spinner-circle"></div>
-                            </div>
-                        </div>
+                                <div class="spinner-layer spinner-layer--yellow">
+                                    <div class="spinner-clipper spinner-clipper--left">
+                                        <div class="spinner-circle"></div>
+                                    </div>
+                                    <div class="spinner--patch">
+                                        <div class="spinner-circle"></div>
+                                    </div>
+                                    <div class="spinner-clipper spinner-clipper--right">
+                                        <div class="spinner-circle"></div>
+                                    </div>
+                                </div>
 
-                        <div class="spinner-layer spinner-layer--green">
-                            <div class="spinner-clipper spinner-clipper--left">
-                                <div class="spinner-circle"></div>
-                            </div>
-                            <div class="spinner--patch">
-                                <div class="spinner-circle"></div>
-                            </div>
-                            <div class="spinner-clipper spinner-clipper--right">
-                                <div class="spinner-circle"></div>
+                                <div class="spinner-layer spinner-layer--green">
+                                    <div class="spinner-clipper spinner-clipper--left">
+                                        <div class="spinner-circle"></div>
+                                    </div>
+                                    <div class="spinner--patch">
+                                        <div class="spinner-circle"></div>
+                                    </div>
+                                    <div class="spinner-clipper spinner-clipper--right">
+                                        <div class="spinner-circle"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </slot>
                 </div>
-            </div>
+            </slot>
         </div>
     </transition>
 </template>
@@ -138,6 +144,7 @@
 
     .pulled-left {
         float: left;
+        padding: 10px 20px
     }
 
     *, *:before, *:after {
