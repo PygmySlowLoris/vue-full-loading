@@ -5,7 +5,7 @@
     >
         <div v-if="showing" :class="{'white-overlay': overlay}">
             <slot name="loading-container">
-                <div class="loader-wrapper">
+                <div :class="loaderClass">
                     <slot name="loading-text">
                         <div class="pulled-left" v-html="label"></div>
                     </slot>
@@ -79,6 +79,9 @@
             },
             overlay: {
                 default: true
+            },
+            loaderClass: {
+                default: 'loader-wrapper'
             },
             // central event bus
             eventBus: {
