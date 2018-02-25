@@ -25,6 +25,7 @@ npm install vue-full-loading --save
 |  `label`              | String    | <b>Default 'Loading...' |
 |  `show`               | Boolean   | <b>Default false</b> <br>Options: true or false.  |
 |  `overlay`            | Boolean   | <b>Default true</b> <br>Options: true or false.  |
+|  `overlay-class`      | String    | <b>Default 'white-overlay'   |
 |  `loader-class`       | String    | <b>Default 'loader-wrapper'   |
 |  `event-bus`          | Object    | <b>Default null</b> <br>Central event Bus  |
 |  `event-show`         | String    | <b>Default 'show-full-loading'|

@@ -3,7 +3,7 @@
             enter-active-class="animated fadeIn"
             leave-active-class="animated fadeOut"
     >
-        <div v-if="showing" :class="{'white-overlay': overlay}">
+        <div v-if="showing" :class="{[overlayClass]: overlay}">
             <slot name="loading-container">
                 <div :class="loaderClass">
                     <slot name="loading-text">
@@ -82,6 +82,9 @@
             },
             loaderClass: {
                 default: 'loader-wrapper'
+            },
+            overlayClass: {
+                default: 'white-overlay'
             },
             // central event bus
             eventBus: {
