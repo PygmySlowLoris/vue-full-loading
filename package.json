@@ -1,6 +1,6 @@
 {
   "name": "vue-full-loading",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Full overlay with spinner for Vue",
   "main": "src/index.js",
   "repository": {
