@@ -99,7 +99,7 @@
         },
         data() {
             return {
-                showing: false
+                showing: this.show
             }
         },
         watch: {
