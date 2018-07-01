@@ -14,7 +14,7 @@ Can be easily handled by your <b>central event bus</b>
 
 ##  Installation
 
-```
+```shell
 npm install vue-full-loading --save
 ```
 
@@ -43,7 +43,7 @@ Available slots:
 ##  Examples
 
 Include the component in your `.vue` file. 
-```
+```vue
 <template>
  <loading
      :show="show"
@@ -53,7 +53,7 @@ Include the component in your `.vue` file.
 ```
 
 You also can manage this component by your eventBus with custom event names. 
-```
+```vue
 <template>
  <loading
      :event-bus="myEventBus"
@@ -66,8 +66,7 @@ You also can manage this component by your eventBus with custom event names.
 > Notice that if no event names passed it will use the default ones.
 
 Match your data with your components props.
-```
-<script>
+```js
 import loading from 'vue-full-loading'
 
 export default {
@@ -81,5 +80,4 @@ export default {
        }
    }
 }
-</script>
 ```
