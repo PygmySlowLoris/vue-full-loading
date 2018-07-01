@@ -72,28 +72,36 @@
     export default {
         props: {
             label: {
+                type: String,
                 default: 'Loading...'
             },
             show: {
+                type: Boolean,
                 default: false
             },
             overlay: {
+                type: Boolean,
                 default: true
             },
             loaderClass: {
+                type: String,
                 default: 'loader-wrapper'
             },
             overlayClass: {
+                type: String,
                 default: 'white-overlay'
             },
             // central event bus
             eventBus: {
+                type: Object,
                 default: null
             },
             eventShow: {
+                type: String,
                 default: 'show-full-loading'
             },
             eventHide: {
+                type: String,
                 default: 'hide-full-loading'
             }
         },
