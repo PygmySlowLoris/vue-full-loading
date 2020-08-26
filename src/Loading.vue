@@ -163,6 +163,8 @@
         width: 40px;
         height: 40px;
         font-size: 0;
+        background-color: transparent;
+        overflow: visible;
     }
 
     .spinner-container {
